@@ -4,7 +4,7 @@
     <ol class="list-group overflow-auto" style="height: 376px;width: 600px;">
         <div *ngFor="let repo of this.apiservice.responseRepositeries">
             <li>
-                <a (click)="this.apiservice.viewRepositery(repo.html_url)">{{repo.name}}</a>
+                <a href="" (click)="this.apiservice.viewRepositery(repo.html_url)">{{repo.name}}</a>
                 <div class="btn-group dropend">
                     <button class="btn btn-secondary" type="submit" value="Fetch" (click)="this.apiservice.getForkers(repo.forks_url);">
                         View Forkers.
