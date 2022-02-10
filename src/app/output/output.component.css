@@ -29,7 +29,3 @@ a{
     text-decoration: none;
     color: black;
 }
-
-span.click:hover {
-    cursor: pointer;
-}

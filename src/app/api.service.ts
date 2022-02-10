@@ -57,11 +57,6 @@ export class ApiService {
       });
   }
 
-  viewRepositery(url:string) {
-    console.log("Viewing forker from " + url) ;
-    window.open(url, "_blank");
-  }
-
   viewForker(url:string) {
     console.log("Viewing forker from " + url) ;
     window.open(url, "_blank");
