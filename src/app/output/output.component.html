@@ -1,3 +1,5 @@
+<!-- First Output div. This is for Repositeries. -->
+
 <div class="container-fluid" *ngIf="this.apiservice.display1">
     <ol class="list-group overflow-auto" style="height: 376px;width: 600px;">
         <div *ngFor="let repo of this.apiservice.responseRepositeries">
@@ -13,6 +15,8 @@
     </ol>
 </div>
 
+<!-- Second Output div. This is for Forkers. -->
+
 <div class="container-fluid" *ngIf="this.apiservice.display2">
     <ol class="list-group overflow-auto" style="height:300px;width: 600px;">
         <div *ngFor="let forker of this.apiservice.responseForkers">
@@ -26,6 +30,8 @@
     </ol>
 </div>
 
+<!-- Third Output div. This is for Invalid Request. -->
+
 <div class="container-fluid" *ngIf="this.apiservice.display3">
     <div class="container alert alert-danger">
         <h2 class="danger">Invalid Request!</h2>
@@ -33,6 +39,8 @@
 </div>
 
 <br>
+
+<!-- Some footers -->
 
 <footer>
     <div class="container">

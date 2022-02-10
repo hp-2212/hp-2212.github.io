@@ -7,12 +7,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class ApiService {
 
-  genericUrl = "https://api.github.com/orgs/";
+  genericUrl = 'https://api.github.com/orgs/';
   inputs: string[] = ["Google", "10", "5"];
   
-  display1 : boolean = false ;
-  display2 : boolean = false ;
-  display3 : boolean = false ;
+  display1 : boolean = false ; // The Output for Repositeries..
+  display2 : boolean = false ; // The Output for forkers..
+  display3 : boolean = false ; // The Output for Invalid Requests!!
+  
   responseRepositeries: any;
   responseForkers: any;
 
@@ -22,8 +23,10 @@ export class ApiService {
     this.display1 = false ;
     this.display2 = false ;
     this.display3 = false ;
-    console.log("Getting Repositery from " + 'https://api.github.com/orgs/' + this.inputs[0] + "/repos?per_page=" +this.inputs[1]);
-    this.http.get('https://api.github.com/orgs/' + this.inputs[0] + "/repos?per_page=" +this.inputs[1]).subscribe(
+
+    console.log("Getting Repositery from " + this.genericUrl + this.inputs[0] + "/repos?per_page=" +this.inputs[1]);
+
+    this.http.get(this.genericUrl + this.inputs[0] + "/repos?per_page=" +this.inputs[1]).subscribe(
       (response) => {
         this.responseRepositeries = response ;
         console.log(this.responseRepositeries);
@@ -39,7 +42,9 @@ export class ApiService {
     this.display1 = false ;
     this.display2 = false ;
     this.display3 = false ;
+
     console.log("Getting Forkers from " + url  + "?per_page=" +this.inputs[2]);
+    
     this.http.get(url  + "?per_page=" +this.inputs[2]).subscribe(
       (response) => {
         this.responseForkers = response ;
