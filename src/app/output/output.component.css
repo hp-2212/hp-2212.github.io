@@ -1,0 +1,31 @@
+.container{
+    background-color:#bdbdbd;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px auto ;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px auto ;
+}
+
+ol {
+    display: block;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px auto;
+    padding: 5px 5px;
+    background-color: #bdbdbd;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

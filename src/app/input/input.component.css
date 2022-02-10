@@ -1,0 +1,19 @@
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: cursive ;
+}
+
+.subcontainer{
+    background-color: #bdbdbd;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn {
+    height: fit-content;
+    margin-block: auto;
+}

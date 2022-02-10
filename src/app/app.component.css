@@ -1,0 +1,12 @@
+.container{
+    background-color:#bdbdbd;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    padding: 2px ;
+}

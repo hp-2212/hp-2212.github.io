@@ -1,0 +1,38 @@
+<div class="container-fluid" *ngIf="this.apiservice.display1">
+    <ol class="list-group overflow-auto" style="height: 376px;width: 600px;">
+        <div *ngFor="let repo of this.apiservice.responseRepositeries">
+            <li>
+                <a href="#" (click)="this.apiservice.viewRepositery(repo.html_url)">{{repo.name}}</a>
+                <div class="btn-group dropend">
+                    <button class="btn btn-secondary" type="submit" value="Fetch" (click)="this.apiservice.getForkers(repo.forks_url);">
+                        View Forkers.
+                    </button>
+                </div>
+            </li>
+        </div>
+    </ol>
+</div>
+
+<div class="container-fluid" *ngIf="this.apiservice.display2">
+    <ol class="list-group overflow-auto" style="height:300px;width: 600px;">
+        <div *ngFor="let forker of this.apiservice.responseForkers">
+            <li>
+                {{forker.owner.login}}
+                    <button class="btn btn-secondary" type="submit" value="Fetch" (click)="this.apiservice.viewForker(forker.owner.html_url);">
+                        View on Github
+                    </button>
+            </li>
+        </div>
+    </ol>
+</div>
+
+<br>
+
+<footer>
+    <div class="container">
+        <p>
+            <b>Please Note :</b>
+            The Repositeries fetched and the forkers are not sorted by number of forks and oldest date respectively. Because of mid-sem (course-load), I couldn't figure out that part. I'll do that shortly after exams. Please give me some time.
+        </p>
+    </div>
+</footer>

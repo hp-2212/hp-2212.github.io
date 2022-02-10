@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="subcontainer">
+        <label for="1ip">Name of Organisation - </label> <br>
+        <input id="1ip" #ipa1 [(ngModel)]="this.apiservice.inputs[0]">
+    </div>
+    <div class="subcontainer">
+        <label for="2ip">N (most popular repositories) - </label> <br>
+        <input id="2ip" #ipa2 [(ngModel)]="this.apiservice.inputs[1]">
+    </div>
+    <div class="subcontainer">
+        <label for="3ip">M (oldest Forkers) - </label> <br>
+        <input id="3" #ipa3 [(ngModel)]="this.apiservice.inputs[2]">
+    </div>
+    <button class="btn btn-secondary" type="submit" value="Fetch" (click)="this.apiservice.getRepositery();" (keyUp.(Enter))="this.apiservice.getRepositery();" >
+            Fetch
+        </button>
+    <!-- </span> -->
+</div>
