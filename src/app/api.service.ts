@@ -61,5 +61,4 @@ export class ApiService {
     console.log("Viewing forker from " + url) ;
     window.open(url, "_blank");
   }
-
 }
