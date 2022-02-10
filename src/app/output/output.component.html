@@ -4,7 +4,7 @@
     <ol class="list-group overflow-auto" style="height: 376px;width: 600px;">
         <div *ngFor="let repo of this.apiservice.responseRepositeries">
             <li>
-                <span>{{repo.name}}</span>
+                <a href="{{repo.html_url}}" target="_blank" >{{repo.name}}</a>
                 <div class="btn-group dropend">
                     <button class="btn btn-secondary" type="submit" value="Fetch" (click)="this.apiservice.getForkers(repo.forks_url);">
                         View Forkers.
@@ -46,7 +46,7 @@
     <div class="container">
         <p>
             **This app is made with Angular.
-            <a href="https://github.com/hp-2212/hp-2212.github.io" target="_blank" ><u>Visit here</u></a> to know more.
+            <a href="https://github.com/hp-2212/hp-2212.github.io" target="_blank" ><u>Visit here</u></a> to get code.
         </p>
     </div>
 </footer>
